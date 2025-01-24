@@ -18,18 +18,15 @@ export default function Navbar() {
         />
         <ul className="flex gap-8">
         <li>
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
           </li>
-         
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
+          
+          
           {isAuthenticated  ? (
             <>
-            
+            <li>
+            <Link href="/profile">Profile</Link>
+          </li>
              
               <li>
                 <LogoutLink className="bg-red-500 px-4 py-2 rounded-lg text-white hover:bg-red-600">
