@@ -1,8 +1,10 @@
 import {  LogoutLink, LoginLink, RegisterLink, useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
-  const { user, isAuthenticated } = useKindeAuth();
+  const {isAuthenticated } = useKindeAuth();
 
   return (
     <nav className="bg-gray-200">
@@ -16,14 +18,14 @@ export default function Navbar() {
         />
         <ul className="flex gap-8">
         <li>
-            <a href="/home">Home</a>
+            <Link href="/home">Home</Link>
           </li>
          
           <li>
-            <a href="/about">About</a>
+            <Link href="/about">About</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link href="/contact">Contact</Link>
           </li>
           {isAuthenticated  ? (
             <>
